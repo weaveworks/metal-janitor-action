@@ -1,0 +1,47 @@
+{
+    "projects": [
+        {
+            "id": "1e499db8-5803-47fa-989a-4d5c7dee1dae",
+            "name": "ProjectA",
+            "created_at": "2020-11-10T18:39:26Z",
+            "updated_at": "2021-04-28T22:45:51Z",
+            "backend_transfer_enabled": false,
+            "customdata": {},
+            "event_alert_configuration": null,
+            "memberships": [
+                {
+                    "href": "/metal/v1/memberships/4c06c352-1f8e-469c-b475-1eca5766abb4"
+                }
+            ],
+            "invitations": [],
+            "devices": [],
+            "ssh_keys": [],
+            "volumes": [],
+            "members": [
+                {
+                    "href": "/metal/v1/users/c2292089-c150-4646-be18-b0b6c4c28035"
+                }
+            ],
+            "transfers": [],
+            "organization": {
+                "href": "/metal/v1/organizations/9d3f6e03-6ff7-4be4-a336-2a63710f3f12"
+            },
+            "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+        }
+    ],
+    "meta": {
+        "first": {
+            "href": "/projects?page=1"
+        },
+        "previous": null,
+        "self": {
+            "href": "/projects?page=1"
+        },
+        "last": {
+            "href": "/projects?page=1"
+        },
+        "current_page": 1,
+        "last_page": 1,
+        "total": 2
+    }
+}

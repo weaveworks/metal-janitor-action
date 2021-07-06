@@ -1,0 +1,17 @@
+# Test binary
+*.test
+
+# Output of the go coverage tool
+coverage.out
+
+# direnv files:
+.envrc
+
+# vim swp files
+*.swp
+
+# IDE dirs
+.vscode/
+.idea/
+
+.DS_Store

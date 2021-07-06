@@ -1,0 +1,24 @@
+name: 'Metal Janitor'
+author: 'Weaveworks'
+description: 'Clean-up Equinix metal projects.'
+inputs: 
+  metal-auth-token:
+    description: 'The Equinix Metal API key to use when making requests. See https://metal.equinix.com/developers/docs/accounts/users/#api-keys for further information.'
+    required: true
+  project-names:
+    description: 'The names of the projects to cleanup. If you want to cleanup all projects then use DELETEALL as the value'
+    required: true
+  dry-run:
+    description: 'Show the action just report or take action'
+    required: true
+    default: 'false'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.metal-auth-token }}
+    - ${{ inputs.project-name}}
+    - ${{ inputs.dry-run }}
+branding:
+  icon: 'delete'
+  color: 'orange'
