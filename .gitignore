@@ -10,6 +10,9 @@ coverage.out
 # vim swp files
 *.swp
 
+# Tools
+tools/bin
+
 # IDE dirs
 .vscode/
 .idea/

@@ -1,15 +1,11 @@
 package action_test
 
 import (
-
-	//"net/http/httptest"
 	"net/http"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	. "github.com/onsi/gomega/ghttp"
-
-	"go.uber.org/zap"
 
 	"github.com/weaveworks/metal-janitor-action/action"
 )
@@ -24,10 +20,7 @@ var _ = Describe("TestMetalJanitor", func() {
 	BeforeEach(func() {
 		s = NewServer()
 
-		logger, logErr := zap.NewDevelopment()
-		Expect(logErr).NotTo(HaveOccurred())
-
-		a, err = action.NewWithURL("12345678", logger, s.HTTPTestServer.Client(), s.HTTPTestServer.URL)
+		a, err = action.NewWithURL("12345678", s.HTTPTestServer.Client(), s.HTTPTestServer.URL)
 		Expect(err).NotTo(HaveOccurred())
 	})
 

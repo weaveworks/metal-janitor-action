@@ -4,23 +4,21 @@ import (
 	"fmt"
 
 	"github.com/packethost/packngo"
-	"go.uber.org/zap"
 )
 
-// cleanProject will clean-up a specific project by name
+// cleanProject will clean-up a specific project by name.
 func (a *action) cleanProject(proj *packngo.Project, dryRun bool) error {
-	logger := a.logger.With("project", proj.Name)
-	logger.Info("cleaning project")
+	Log("cleaning project %s", proj.Name)
 
-	if err := a.cleanupDevices(logger, proj, dryRun); err != nil {
+	if err := a.cleanupDevices(proj, dryRun); err != nil {
 		return fmt.Errorf("cleaning up devices: %w", err)
 	}
 
-	if err := a.cleanupVolumes(logger, proj, dryRun); err != nil {
+	if err := a.cleanupVolumes(proj, dryRun); err != nil {
 		return fmt.Errorf("cleaning up volumes: %w", err)
 	}
 
-	logger.Info("deleting project")
+	Log("deleting project")
 	if !dryRun {
 		if _, err := a.client.Projects.Delete(proj.ID); err != nil {
 			return fmt.Errorf("deleting project %s: %w", proj.Name, err)
@@ -30,16 +28,16 @@ func (a *action) cleanProject(proj *packngo.Project, dryRun bool) error {
 	return nil
 }
 
-// cleanupDevices will cleanup devices in a project
-func (a *action) cleanupDevices(logger *zap.SugaredLogger, proj *packngo.Project, dryRun bool) error {
-	logger.Debug("listing devices in project")
+// cleanupDevices will cleanup devices in a project.
+func (a *action) cleanupDevices(proj *packngo.Project, dryRun bool) error {
+	LogDebug("listing devices in project %s", proj.Name)
 	devices, _, err := a.client.Devices.List(proj.ID, nil)
 	if err != nil {
 		return fmt.Errorf("listing devices for project: %w", err)
 	}
 	for i := range devices {
 		device := devices[i]
-		logger.Infow("deleting device", "name", device.Hostname, "id", device.ID)
+		Log("deleting device %s", device.Hostname)
 		if !dryRun {
 			_, err = a.client.Devices.Delete(device.ID, true)
 			if err != nil {
@@ -51,16 +49,16 @@ func (a *action) cleanupDevices(logger *zap.SugaredLogger, proj *packngo.Project
 	return nil
 }
 
-// cleanupVolumes will cleanup volumes in a project
-func (a *action) cleanupVolumes(logger *zap.SugaredLogger, proj *packngo.Project, dryRun bool) error {
-	logger.Debug("listing volumes in project")
+// cleanupVolumes will cleanup volumes in a project.
+func (a *action) cleanupVolumes(proj *packngo.Project, dryRun bool) error {
+	LogDebug("listing volumes in project %s", proj.Name)
 	volumes, _, err := a.client.Volumes.List(proj.ID, nil)
 	if err != nil {
 		return fmt.Errorf("listing volumes for project: %w", err)
 	}
 	for i := range volumes {
 		volume := volumes[i]
-		logger.Infow("deleting volume", "volume", volume.Name)
+		Log("deleting volume %s", volume.Name)
 		if !dryRun {
 			_, err = a.client.Volumes.Delete(volume.ID)
 			if err != nil {
