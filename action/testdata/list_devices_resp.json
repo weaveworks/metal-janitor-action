@@ -1,0 +1,489 @@
+{
+    "devices": [
+        {
+            "id": "321c8340-dc80-40a9-a2e6-e0efdb9a59a6",
+            "short_id": "123456789",
+            "hostname": "project1-dev1",
+            "description": null,
+            "tags": [],
+            "image_url": null,
+            "billing_cycle": "hourly",
+            "user": "root",
+            "iqn": "iqn.2021-07.net.packet:device.123456789",
+            "locked": false,
+            "bonding_mode": 5,
+            "created_at": "2021-07-02T13:36:29Z",
+            "updated_at": "2021-07-04T22:45:38Z",
+            "ipxe_script_url": null,
+            "always_pxe": false,
+            "storage": {},
+            "customdata": {},
+            "created_by": {
+                "id": "8c235333-5503-487c-8b44-94c7e6f57a78",
+                "short_id": "91fb120a",
+                "first_name": "Joe",
+                "last_name": "Blogs",
+                "full_name": "Joe Blogs",
+                "email": "joe@blogs.com",
+                "created_at": "2021-05-12T15:26:27Z",
+                "updated_at": "2021-07-06T11:08:47Z",
+                "level": "verified",
+                "avatar_thumb_url": "https://www.gravatar.com/avatar/1234556?d=mm",
+                "href": "/metal/v1/users/8c235333-5503-487c-8b44-94c7e6f57a78"
+            },
+            "operating_system": {
+                "id": "474407a1-d77b-4200-b0d5-89335a149f7a",
+                "slug": "centos_7",
+                "name": "CentOS 7",
+                "distro": "centos",
+                "version": "7",
+                "preinstallable": true,
+                "pricing": {},
+                "provisionable_on": [
+                    "amd.eap",
+                    "c1.large.arm",
+                    "baremetal_2a",
+                    "c1.small.x86",
+                    "baremetal_1",
+                    "c1.xlarge.x86",
+                    "baremetal_3",
+                    "c2.large.arm",
+                    "c2.medium.x86",
+                    "c2.small.x86",
+                    "c3.medium.x86",
+                    "c3.small.x86",
+                    "cpe1.g1.4028gr",
+                    "cpe1.m2.r640",
+                    "cpe1.s1.r730",
+                    "d1f.optane.x86",
+                    "d1p.optane.x86",
+                    "g2.large.x86",
+                    "m1.xlarge.x86",
+                    "baremetal_2",
+                    "m2.xlarge.x86",
+                    "m3.large.x86",
+                    "n2.xlarge.google",
+                    "n2.xlarge.x86",
+                    "s1.large.x86",
+                    "baremetal_s",
+                    "s3.xlarge.x86",
+                    "t1.small.x86",
+                    "baremetal_0",
+                    "t3.small.x86",
+                    "t3.xsmall.x86",
+                    "x1.small.x86",
+                    "baremetal_1e",
+                    "x2.xlarge.x86"
+                ],
+                "licensed": false
+            },
+            "facility": {
+                "id": "b7f111b2-eee4-46c6-b730-1146052078a5",
+                "name": "Somewhere",
+                "code": "some",
+                "features": [
+                    "baremetal",
+                    "storage",
+                    "backend_transfer",
+                    "layer_2",
+                    "global_ipv4"
+                ],
+                "metro": {
+                    "id": "5e7641e2-f924-4b4a-9993-a5634bbf74a8",
+                    "name": "New York",
+                    "code": "ny",
+                    "country": "US"
+                },
+                "ip_ranges": [
+                    "2677:1380::/36",
+                    "148.75.192.0/21",
+                    "148.75.64.0/22",
+                    "148.75.72.0/22",
+                    "148.75.76.0/22",
+                    "148.75.104.0/22",
+                    "148.75.96.0/20"
+                ],
+                "address": {
+                    "id": "8ee86227-3d06-4488-83e7-743718c08f2d",
+                    "address": "300 A Road",
+                    "address2": null,
+                    "city": "Somewhere",
+                    "state": "NJ",
+                    "zip_code": "1234567",
+                    "country": "US",
+                    "coordinates": {
+                        "latitude": "45.857084",
+                        "longitude": "-78.4210957"
+                    }
+                }
+            },
+            "project": {
+                "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+            },
+            "ssh_keys": [
+                {
+                    "href": "/metal/v1/ssh-keys/a8c74e4d-aea2-46ac-a149-8a3d31e216e6"
+                }
+            ],
+            "project_lite": {
+                "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+            },
+            "volumes": [],
+            "ip_addresses": [
+                {
+                    "id": "0648a29b-f5b0-40ed-a6d0-17576b7edb55",
+                    "address_family": 4,
+                    "netmask": "255.255.255.254",
+                    "created_at": "2021-07-02T13:36:32Z",
+                    "details": null,
+                    "tags": [],
+                    "public": true,
+                    "cidr": 31,
+                    "management": true,
+                    "manageable": true,
+                    "enabled": true,
+                    "global_ip": false,
+                    "customdata": {},
+                    "project": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "project_lite": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "metro": {
+                        "id": "5e7641e2-f924-4b4a-9993-a5634bbf74a8",
+                        "name": "New York",
+                        "code": "ny",
+                        "country": "US"
+                    },
+                    "assigned_to": {
+                        "href": "/metal/v1/devices/321c8340-dc80-40a9-a2e6-e0efdb9a59a6"
+                    },
+                    "interface": {
+                        "href": "/metal/v1/ports/b5e382d9-4840-4a35-95ce-13989535700b"
+                    },
+                    "network": "129.178.64.98",
+                    "address": "129.178.64.99",
+                    "gateway": "129.178.64.98",
+                    "href": "/metal/v1/ips/0748a29b-f5b0-40ed-a6d0-17576b7edb55",
+                    "facility": null
+                },
+                {
+                    "id": "b4deg739-890c-47df-b458-c9e0ec8a88a8",
+                    "address_family": 6,
+                    "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe",
+                    "created_at": "2021-07-02T13:36:34Z",
+                    "details": null,
+                    "tags": [],
+                    "public": true,
+                    "cidr": 127,
+                    "management": true,
+                    "manageable": true,
+                    "enabled": true,
+                    "global_ip": false,
+                    "customdata": {},
+                    "project": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "project_lite": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "metro": null,
+                    "assigned_to": {
+                        "href": "/metal/v1/devices/331c8340-dc80-40a9-a2e6-e0efdb9a59a6"
+                    },
+                    "interface": {
+                        "href": "/metal/v1/ports/b7e382d9-4840-4a35-95ce-13989535700b"
+                    },
+                    "network": "2704:1380:0:5000::6",
+                    "address": "2704:1380:0:5000::7",
+                    "gateway": "2704:1380:0:5000::6",
+                    "href": "/metal/v1/ips/b5def739-890c-47df-b458-c9e0ec8a88a8",
+                    "facility": {
+                        "id": "b7f111b2-eee4-46c6-b730-1146052078a5",
+                        "name": "Somewhere",
+                        "code": "some",
+                        "features": [
+                            "baremetal",
+                            "storage",
+                            "backend_transfer",
+                            "layer_2",
+                            "global_ipv4"
+                        ],
+                        "metro": {
+                            "id": "5e8641e2-f924-4b4a-9993-a5634bbf74a8",
+                            "name": "New York",
+                            "code": "ny",
+                            "country": "US"
+                        },
+                        "ip_ranges": [
+                            "2704:1380::/36",
+                            "148.75.192.0/21",
+                            "148.75.64.0/22",
+                            "148.75.72.0/22",
+                            "148.75.76.0/22",
+                            "148.75.104.0/22",
+                            "148.75.96.0/20"
+                        ],
+                        "address": {
+                            "id": "8ee96227-3d06-4488-83e7-743718c08f2d",
+                            "address": "300 A Road",
+                            "address2": null,
+                            "city": "Somewhere",
+                            "state": "NJ",
+                            "zip_code": "1234567",
+                            "country": "US",
+                            "coordinates": {
+                                "latitude": "46.857084",
+                                "longitude": "-78.4210957"
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "27054340-cb37-4c3c-ba0a-50117b0f0498",
+                    "address_family": 4,
+                    "netmask": "255.255.255.254",
+                    "created_at": "2021-07-02T13:36:34Z",
+                    "details": null,
+                    "tags": [],
+                    "public": false,
+                    "cidr": 31,
+                    "management": true,
+                    "manageable": true,
+                    "enabled": true,
+                    "global_ip": false,
+                    "customdata": {},
+                    "project": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "project_lite": {
+                        "href": "/metal/v1/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"
+                    },
+                    "metro": null,
+                    "assigned_to": {
+                        "href": "/metal/v1/devices/321c8340-dc80-40a9-a2e6-e0efdb9a59a6"
+                    },
+                    "interface": {
+                        "href": "/metal/v1/ports/b5e382d9-4840-4a35-95ce-13989535700b"
+                    },
+                    "network": "10.98.2.134",
+                    "address": "10.98.2.135",
+                    "gateway": "10.98.2.134",
+                    "href": "/metal/v1/ips/26054340-cb37-4c3c-ba0a-50117b0f0498",
+                    "facility": {
+                        "id": "b7f111b2-eee4-46c6-b730-1146052078a5",
+                        "name": "Somewhere",
+                        "code": "some",
+                        "features": [
+                            "baremetal",
+                            "storage",
+                            "backend_transfer",
+                            "layer_2",
+                            "global_ipv4"
+                        ],
+                        "metro": {
+                            "id": "5e7641e2-f924-4b4a-9993-a5634bbf74a8",
+                            "name": "New York",
+                            "code": "ny",
+                            "country": "US"
+                        },
+                        "ip_ranges": [
+                            "2704:1380::/36",
+                            "148.75.192.0/21",
+                            "148.75.64.0/22",
+                            "148.75.72.0/22",
+                            "148.75.76.0/22",
+                            "148.75.104.0/22",
+                            "148.75.96.0/20"
+                        ],
+                        "address": {
+                            "id": "8ee86227-3d06-4488-83e7-743718c08f2d",
+                            "address": "300 A Road",
+                            "address2": null,
+                            "city": "Somewhere",
+                            "state": "NJ",
+                            "zip_code": "123456",
+                            "country": "US",
+                            "coordinates": {
+                                "latitude": "45.857084",
+                                "longitude": "-79.4210957"
+                            }
+                        }
+                    }
+                }
+            ],
+            "metro": {
+                "id": "5e7641e2-f924-4b4a-9993-a5634bbf74a8",
+                "name": "New York",
+                "code": "ny",
+                "country": "US"
+            },
+            "plan": {
+                "id": "e70c0169-4726-46ea-98f1-939c9e8a3607",
+                "slug": "baremetal_0",
+                "name": "t1.small.x86",
+                "description": "Our Type 0 configuration is a general use \"cloud killer\" server, with a Intel Atom 2.4Ghz processor and 8GB of RAM.",
+                "line": "baremetal",
+                "specs": {
+                    "cpus": [
+                        {
+                            "count": 1,
+                            "type": "Intel Atom C2550 @ 2.4Ghz"
+                        }
+                    ],
+                    "memory": {
+                        "total": "8GB"
+                    },
+                    "drives": [
+                        {
+                            "count": 1,
+                            "size": "80GB",
+                            "type": "SSD"
+                        }
+                    ],
+                    "nics": [
+                        {
+                            "count": 2,
+                            "type": "1Gbps"
+                        }
+                    ],
+                    "features": {
+                        "raid": false,
+                        "txt": true
+                    }
+                },
+                "legacy": false,
+                "deployment_types": [
+                    "on_demand",
+                    "spot_market"
+                ],
+                "class": "t1.small.x86",
+                "pricing": {
+                    "hour": 0.07
+                },
+                "reservation_pricing": {},
+                "available_in": [
+                    {
+                        "href": "/facilities/8ea14255-89f9-4e62-9d3f-8817db82ceed"
+                    },
+                    {
+                        "href": "/facilities/b7f111b2-eee4-46c6-b730-1146052078a5"
+                    },
+                    {
+                        "href": "/facilities/2b81eb8f-fa18-47c0-aba7-222a842362fd"
+                    },
+                    {
+                        "href": "/facilities/8e7570b3-b75e-47d1-bb93-45b225750975"
+                    }
+                ],
+                "available_in_metros": [
+                    {
+                        "href": "/locations/metros/5f83cbf6-96e4-44f2-ae60-213888fa2b9f"
+                    },
+                    {
+                        "href": "/locations/metros/5e8741e2-f924-4b4a-9993-a5634bbf74a8"
+                    },
+                    {
+                        "href": "/locations/metros/3191b022-b8c4-497e-8db7-5a407c3a209b"
+                    },
+                    {
+                        "href": "/locations/metros/218b2cfb-246b-45e3-885a-bf3e82fce1a0"
+                    }
+                ]
+            },
+            "actions": [
+                {
+                    "type": "reboot",
+                    "name": "Reboot"
+                },
+                {
+                    "type": "rescue",
+                    "name": "Rescue"
+                },
+                {
+                    "type": "power_on",
+                    "name": "Power On"
+                },
+                {
+                    "type": "power_off",
+                    "name": "Power Off"
+                },
+                {
+                    "type": "reinstall",
+                    "name": "Reinstall"
+                }
+            ],
+            "network_frozen": false,
+            "userdata": "",
+            "switch_uuid": "b2f07ffb",
+            "network_ports": [
+                {
+                    "id": "b6e382d9-4840-4a35-95ce-13989535700b",
+                    "type": "NetworkBondPort",
+                    "name": "bond0",
+                    "data": {
+                        "bonded": true
+                    },
+                    "network_type": "layer3",
+                    "native_virtual_network": null,
+                    "virtual_networks": [],
+                    "disbond_operation_supported": false,
+                    "href": "/metal/v1/ports/b5e382d9-4840-4a35-95ce-13989535700b"
+                },
+                {
+                    "id": "21c9755c-24be-4f44-a322-1d39423880b6",
+                    "type": "NetworkPort",
+                    "name": "eth0",
+                    "data": {
+                        "mac": "0c:c4:7a:b5:89:30",
+                        "bonded": true
+                    },
+                    "bond": {
+                        "id": "b5e492d9-4840-4a35-95ce-13989535700b",
+                        "name": "bond0"
+                    },
+                    "native_virtual_network": null,
+                    "virtual_networks": [],
+                    "disbond_operation_supported": false,
+                    "href": "/metal/v1/ports/32c9645c-24be-4f44-a322-1d39423880b6"
+                },
+                {
+                    "id": "0af8b471-d522-4be1-a59f-01cb4deb57f1",
+                    "type": "NetworkPort",
+                    "name": "eth1",
+                    "data": {
+                        "mac": "0c:c4:7a:b5:89:31",
+                        "bonded": true
+                    },
+                    "bond": {
+                        "id": "b5e382d9-4840-4a35-95ce-13989535700b",
+                        "name": "bond0"
+                    },
+                    "native_virtual_network": null,
+                    "virtual_networks": [],
+                    "disbond_operation_supported": false,
+                    "href": "/metal/v1/ports/0af8b471-d522-4be1-a59f-01cb4deb57f1"
+                }
+            ],
+            "state": "active",
+            "href": "/metal/v1/devices/321c8340-dc80-40a9-a2e6-e0efdb9a59a6"
+        }
+    ],
+    "meta": {
+        "first": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/devices?page=1"
+        },
+        "previous": null,
+        "self": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/devices?page=1"
+        },
+        "next": null,
+        "last": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/devices?page=1"
+        },
+        "current_page": 1,
+        "last_page": 1,
+        "total": 1
+    }
+}

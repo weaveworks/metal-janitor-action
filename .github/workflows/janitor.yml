@@ -1,0 +1,23 @@
+name: releasenote
+
+on:
+  workflow_dispatch:
+    inputs:
+      metal-auth-token:
+        description: 'Equinix Metal API Key'
+        required: true
+      project-names:
+        description: 'Names of the projects to cleanup'
+        required: true
+      dry-run:
+        description: 'Perform no action but report what action would be taken'
+        required: true
+        default: 'false'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    name: Cleanup projects
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./

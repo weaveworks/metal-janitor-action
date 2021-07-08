@@ -1,0 +1,19 @@
+{
+    "volumes": [],
+    "meta": {
+        "first": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage?page=1"
+        },
+        "previous": null,
+        "self": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage?page=1"
+        },
+        "next": null,
+        "last": {
+            "href": "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage?page=0"
+        },
+        "current_page": 1,
+        "last_page": 0,
+        "total": 0
+    }
+}
