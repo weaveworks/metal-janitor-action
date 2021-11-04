@@ -14,10 +14,6 @@ func (a *action) cleanProject(proj *packngo.Project, dryRun bool) error {
 		return fmt.Errorf("cleaning up devices: %w", err)
 	}
 
-	if err := a.cleanupVolumes(proj, dryRun); err != nil {
-		return fmt.Errorf("cleaning up volumes: %w", err)
-	}
-
 	Log("deleting project")
 	if !dryRun {
 		if _, err := a.client.Projects.Delete(proj.ID); err != nil {
@@ -42,27 +38,6 @@ func (a *action) cleanupDevices(proj *packngo.Project, dryRun bool) error {
 			_, err = a.client.Devices.Delete(device.ID, true)
 			if err != nil {
 				return fmt.Errorf("deleting device %s: %w", device.Hostname, err)
-			}
-		}
-	}
-
-	return nil
-}
-
-// cleanupVolumes will cleanup volumes in a project.
-func (a *action) cleanupVolumes(proj *packngo.Project, dryRun bool) error {
-	LogDebug("listing volumes in project %s", proj.Name)
-	volumes, _, err := a.client.Volumes.List(proj.ID, nil)
-	if err != nil {
-		return fmt.Errorf("listing volumes for project: %w", err)
-	}
-	for i := range volumes {
-		volume := volumes[i]
-		Log("deleting volume %s", volume.Name)
-		if !dryRun {
-			_, err = a.client.Volumes.Delete(volume.ID)
-			if err != nil {
-				return fmt.Errorf("deleting volume %s: %w", volume.Name, err)
 			}
 		}
 	}

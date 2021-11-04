@@ -44,10 +44,6 @@ var _ = Describe("TestMetalJanitor", func() {
 					RespondWith(http.StatusAccepted, nil, http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
 				),
 				CombineHandlers(
-					VerifyRequest("GET", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage"),
-					RespondWith(http.StatusOK, getTestData("list_volumes_empty_resp.json"), http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
-				),
-				CombineHandlers(
 					VerifyRequest("DELETE", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"),
 					RespondWith(http.StatusAccepted, nil, http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
 				),
@@ -58,7 +54,7 @@ var _ = Describe("TestMetalJanitor", func() {
 
 		It("should cleanup the projects", func() {
 			Expect(err).NotTo(HaveOccurred())
-			Expect(len(s.ReceivedRequests())).Should(Equal(5))
+			Expect(len(s.ReceivedRequests())).Should(Equal(4))
 		})
 	})
 
@@ -73,10 +69,6 @@ var _ = Describe("TestMetalJanitor", func() {
 					VerifyRequest("GET", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/devices"),
 					RespondWith(http.StatusOK, getTestData("list_devices_resp.json"), http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
 				),
-				CombineHandlers(
-					VerifyRequest("GET", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage"),
-					RespondWith(http.StatusOK, getTestData("list_volumes_empty_resp.json"), http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
-				),
 			)
 
 			err = a.Cleanup("ProjectA", true)
@@ -84,7 +76,7 @@ var _ = Describe("TestMetalJanitor", func() {
 
 		It("should cleanup the projects", func() {
 			Expect(err).NotTo(HaveOccurred())
-			Expect(len(s.ReceivedRequests())).Should(Equal(3))
+			Expect(len(s.ReceivedRequests())).Should(Equal(2))
 		})
 	})
 
@@ -104,10 +96,6 @@ var _ = Describe("TestMetalJanitor", func() {
 					RespondWith(http.StatusAccepted, nil, http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
 				),
 				CombineHandlers(
-					VerifyRequest("GET", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae/storage"),
-					RespondWith(http.StatusOK, getTestData("list_volumes_empty_resp.json"), http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
-				),
-				CombineHandlers(
 					VerifyRequest("DELETE", "/projects/1e499db8-5803-47fa-989a-4d5c7dee1dae"),
 					RespondWith(http.StatusAccepted, nil, http.Header{"Content-Type": []string{"application/json; charset=utf-8"}}),
 				),
@@ -118,7 +106,7 @@ var _ = Describe("TestMetalJanitor", func() {
 
 		It("should cleanup the projects", func() {
 			Expect(err).NotTo(HaveOccurred())
-			Expect(len(s.ReceivedRequests())).Should(Equal(5))
+			Expect(len(s.ReceivedRequests())).Should(Equal(4))
 		})
 	})
 })
